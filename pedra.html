@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Pedra, Papel e Tesoura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Pedra, Papel e Tesoura</h1> 
+        <div class="hands-wrapper">
+
+            <div id="contador1show" class="image"></div>
+            <div id="contador2show" class="image"></div>
+
+            <img style="visibility:hidden" id="perdeu1" src="img/perdeu.gif" alt="">
+            <img style="visibility:hidden" id="ganhou1" src="img/ganhou.gif" alt="">
+            <img style="visibility:hidden" id="perdeu2" src="img/perdeu.gif" alt="">
+            <img style="visibility:hidden" id="ganhou2" src="img/ganhou.gif" alt="">
+
+            <div class="minhasMaos">
+                <button id="btnPedra" onclick="jogo('imgPedra','animapedra1')" class="image">
+                  <img id="imgPedra" src="img/pedra.jpg" alt="Pedra">
+                </button>
+                <button id="btnPapel" onclick="jogo('imgPapel','animapapel1')" class="image">
+                  <img id="imgPapel" src="img/papel.jpg" alt="Papel">
+                </button>
+                <button id="btnTesoura" onclick="jogo('imgTesoura','animatesoura1')" class="image">
+                  <img id="imgTesoura" src="img/tesoura.jpg" alt="Tesoura">
+                </button>
+              </div>
+
+            <div class="maosContrarias">
+                <img  id="imgPedra2" src="img/pedra.jpg" alt="Pedra">
+                <img  id="imgPapel2" src="img/papel.jpg" alt="Papel">
+                <img  id="imgTesoura2" src="img/tesoura.jpg" alt="Tesoura">
+            </div>
+        </div>
+        <div class="result-container">
+            <span id="result"></span>
+        </div>
+    </div>
+
+    <div id="rede">
+      <img id="imgRede" src="img/rede.png" alt="">
+      <div id="redeEntrada"></div>
+      <div id="redePedra">rP1</div>
+      <div id="redePapel">rP2</div>
+      <div id="redeTesoura">rT</div>
+      <div id="redeSaida">rS</div>
+      <div id="nomePedra">PEDRA</div>
+      <div id="nomePapel">PAPEL</div>
+      <div id="nomeTesoura">TESOURA</div>
+
+    </div>
+
+    <script>
+           var contador1 = 0 
+      var contador1show = document.getElementById('contador1show');
+      contador1show.innerHTML =  contador1
+      var contador2 = 0 
+      var contador2show = document.getElementById('contador2show');
+      contador2show.innerHTML =  contador2
+
+      var varRedeEntrada = "Pedra" 
+      var varRedeEntradashow = document.getElementById('redeEntrada');
+      varRedeEntradashow.innerHTML =  varRedeEntrada
+
+      var varRedePedra = jogadaPedra[1]+"%" 
+      var varRedePedrashow = document.getElementById('redePedra');
+      varRedePedrashow.innerHTML =  varRedePedra
+
+      var varRedePapel = jogadaPapel[1]+"%" 
+      var varRedePapelshow = document.getElementById('redePapel');
+      varRedePapelshow.innerHTML =  varRedePapel
+
+      var varRedeTesoura = jogadaTesoura[1]+"%" 
+      var varRedeTesourashow = document.getElementById('redeTesoura');
+      varRedeTesourashow.innerHTML =  varRedeTesoura
+
+      var varRedeSaida = "Tesoura" 
+      var varRedeSaidashow = document.getElementById('redeSaida');
+      varRedeSaidashow.innerHTML =  varRedeSaida
+
+    </script>
+</body>
+</html>

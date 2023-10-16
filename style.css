@@ -1,0 +1,370 @@
+body {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 600px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.hands-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.minhasMaos {
+    transform: scaleX(-1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: -142px; 
+}
+.maosContrarias {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 134px; 
+}
+
+.hand-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+
+}
+.hand-image-container {
+display: flex;
+flex-direction: column;
+gap: 10px;
+transform: scaleX(-1);
+}
+
+.non-clickable-image {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.clickable-image {
+    cursor: pointer;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+#imgPedra{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0px; 
+    left: 0px; 
+    -webkit-transform: scaleX(-1);  
+transform: scaleX(-1);  
+}
+#imgPapel{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0px; 
+    left: 0px; 
+    -webkit-transform: scaleX(-1);  
+transform: scaleX(-1);  
+}
+#imgTesoura{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0px; 
+    left: 0px; 
+    -webkit-transform: scaleX(-1);  
+transform: scaleX(-1);  
+}
+#imgPedra2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0px; 
+    left: 0px; 
+    -webkit-transform: scaleX(-1);  
+transform: scaleX(-1);  
+}
+#imgPapel2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0px; 
+    left: 0px; 
+    -webkit-transform: scaleX(-1);  
+transform: scaleX(-1);  
+}
+#imgTesoura2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0px; 
+    left: 0px; 
+    -webkit-transform: scaleX(-1);  
+transform: scaleX(-1);  
+}
+
+/*ANIMAÇÕES */
+.image:hover {
+transform: scale(1.1);
+}
+
+.animapedra1 {
+animation-name: animapedra1a;
+animation-duration: 1.0s;
+animation-iteration-count: 1;
+}
+
+@keyframes animapedra1a {
+0% {
+transform: translate(0, 0) scaleX(-1);
+}
+50% {
+transform: translate(-160px, 119px) scaleX(-1);
+}
+100% {
+transform: translate(0, 0) scaleX(-1);
+}
+}
+
+.animapapel1 {
+animation-name: animapapel1a;
+animation-duration: 1.0s;
+animation-iteration-count: 1;
+}
+
+@keyframes animapapel1a {
+0% {
+transform: translate(0, 0) scaleX(-1);
+}
+50% {
+transform: translate(-160px, 0) scaleX(-1);
+}
+100% {
+transform: translate(0, 0) scaleX(-1);
+}
+}
+
+.animatesoura1 {
+animation-name: animatesoura1a;
+animation-duration: 1.0s;
+animation-iteration-count: 1;
+}
+
+@keyframes animatesoura1a {
+0% {
+transform: translate(0, 0) scaleX(-1);
+}
+50% {
+transform: translate(-160px, -119px) scaleX(-1);
+}
+100% {
+transform: translate(0, 0) scaleX(-1);
+}
+}
+
+.animapedra2 {
+animation-name: animapedra2a;
+animation-duration: 1.0s;
+animation-iteration-count: 1;
+}
+
+@keyframes animapedra2a {
+0% {
+transform: translate(0, 0) scaleX(-1);
+}
+50% {
+transform: translate(-110px, 120px) scaleX(-1);
+}
+100% {
+transform: translate(0, 0) scaleX(-1);
+}
+}
+
+.animapapel2 {
+animation-name: animapapel2a;
+animation-duration: 1.0s;
+animation-iteration-count: 1;
+}
+
+@keyframes animapapel2a {
+0% {
+transform: translate(0, 0) scaleX(-1);
+}
+50% {
+transform: translate(-110px, 0px) scaleX(-1);
+}
+100% {
+transform: translate(0, 0) scaleX(-1);
+}
+}
+
+.animatesoura2 {
+animation-name: animatesoura2a;
+animation-duration: 1.0s;
+animation-iteration-count: 1;
+}
+
+@keyframes animatesoura2a {
+0% {
+transform: translate(0, 0) scaleX(-1);
+}
+50% {
+transform: translate(-110px, -100px) scaleX(-1);
+}
+100% {
+transform: translate(0, 0) scaleX(-1);
+}
+}
+#ganhou1{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+   
+    top: 166px; 
+    left: 237px; 
+    z-index: 2;
+}
+#perdeu1{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    
+    top: 166px; 
+    left: 237px; 
+    z-index: 2;
+}
+
+#ganhou2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+   
+    top: 166px; 
+    left: 363px; 
+    z-index: 2;
+}
+#perdeu2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    
+    top: 166px; 
+    left: 363px; 
+    z-index: 2;
+}
+#contador1show{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    font-family: 'm5x7', Arial, sans-serif;
+font-size: 50px;
+    top: 80px; 
+    left: 80px; 
+    z-index: 2;
+}
+#contador2show{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    font-family: 'm5x7', Arial, sans-serif;
+    font-size: 50px;
+    top: 80px; 
+    left: 541px; 
+    z-index: 2;
+}
+
+#redeEntrada{
+    position: absolute;
+
+    top: 265px;
+    left: 664px;
+}
+#redePedra{
+    position: absolute;
+
+    top: 155px;
+    left: 806px;
+}
+#redePapel{
+    position: absolute;
+
+    top: 265px;
+    left: 806px;
+}
+#redeTesoura{
+    position: absolute;
+
+    top: 381px;
+    left: 806px;
+}
+#redeSaida{
+    position: absolute;
+
+    top: 265px;
+    left: 915px;
+}
+#imgRede{
+    position: absolute;
+
+    top: 0px;
+    left: 636px;
+}
+
+#nomePedra{
+    position: absolute;
+
+    top: 96px;
+    left: 788px;
+}
+#nomePapel{
+    position: absolute;
+
+    top: 218px;
+    left: 794px;
+}
+#nomeTesoura{
+    position: absolute;
+
+    top: 330px;
+    left: 777px;
+}
